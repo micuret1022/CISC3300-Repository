@@ -1,0 +1,99 @@
+<!-- 1. Structural elements refer to the way HTML elements organize the content on the page and provide a basic structure for the document. For example, <header>, <main>,and <footer> all provide a clear structural layout for the web page. Semantic elements go beyond the structure and try to convey the meaning of the content. The semantic elements consist of information about the type of content inside of them. For example, <article>, <section>, and <figure> all add semantic meaning to the web page. 
+
+    2. It’s important to use correct html elements when designing web pages for reasons that include accessibility, consistency, search engine optimization (SEO), and readability. Using the correct html elements increases accessibility for users, especially those with disabilities. Correct elements also allow for a consistent and maintainable codebase, which allows developers to more easily collaborate with each other. Search engines also rely on proper structure of HTML to understand the content correctly. 
+
+    3. Forms in HTML are used to collect user input. They allow users to enter data, such as phone numbers, emails, and feedback. Common form elements include: <form>, <select>, <button>, and <textarea>. The <form> element encapsulates all of the other form elements. Forms can be used for many different purposes, such as user authentication, data submission, or surveys.
+
+    4. 4. Inline elements do not start on a new line; they continue within the content and only take up as much width as necessary. Examples include, <span>, <a>, and <em>. Block elements always start on a new line and extend to the full width available which forces a new block of content.  Examples of block elements include, <div>, <p>, and <h1>.
+
+    -->
+
+
+<!DOCTYPE html>
+<html lang = “en”>
+    <head>
+        <meta charset = “UTF-8”>
+        <title>Bookstore</title>
+    </head>
+
+    <body>
+        <!--CENTER-->
+        <h1>Welcome to Brewing Books</h1>
+
+        &nbsp;
+
+        <div class="content-div">
+            Hi, I'm Maddie! I'm your go-to book buddy, sharing my favorite reads and exploring new ones. By day, I'm a student, but by night, you'll find me lost in the magic of storytelling. Let's chat books, swap recommendations, and make this a cozy space for all things literary. Welcome to our bookish corner! 
+        </div>
+
+        <h2>Categories</h2>
+    	<ul>
+            <li><a href="https://www.amazon.com/s?k=fiction+books&crid=ORK1PZQ072VC&sprefix=fiction+books%2Caps%2C126&ref=nb_sb_noss_1">Fiction</a></li>
+            <li><a href="https://www.amazon.com/s?k=fantasy+books&crid=Y6Z4RG9HZKXB&sprefix=fantasy+books%2Caps%2C237&ref=nb_sb_noss_1">Fantasy</a></li>
+            <li><a href="https://www.amazon.com/s?k=romance+books&crid=2XM85ZFUP4249&sprefix=romanc+books%2Caps%2C114&ref=nb_sb_noss_2">Romance</a></li>
+            <li><a href="https://www.amazon.com/s?k=nonfiction+books&crid=S5GSZJ1WA8GI&sprefix=nonfiction+books%2Caps%2C94&ref=nb_sb_noss_1">Non-fiction</a></li>
+    	</ul>
+
+        &nbsp;
+
+        <!-- Center in the middle of the page-->
+        <h2>Featured Books</h2>
+    	
+            <img src="https://m.media-amazon.com/images/I/81DW1r3CIwL._AC_UF1000,1000_QL80_.jpg" alt="Throne of Glass" width="150">
+            <p><a href="https://www.amazon.com/Throne-Glass-1/dp/163973094X/ref=sr_1_1?crid=3EYNFX46MAWGI&keywords=throne+of+glass+hardcover&qid=1706645105&sprefix=throne+of+glass+har%2Caps%2C128&sr=8-1">Throne of Glass</a></p>
+            <img src=" https://m.media-amazon.com/images/I/810I+gtUtwL._AC_UF1000,1000_QL80_.jpg" alt="The Selection" width="150">
+            <p><a href="https://www.amazon.com/Selection-Kiera-Cass/dp/0062059939/ref=sr_1_1?crid=BM74DX23606O&keywords=the+selection+hardcover&qid=1706645128&sprefix=the+selection+hardcover%2Caps%2C108&sr=8-1">The Selection</a></p>
+            <img src="https://m.media-amazon.com/images/I/51IPe62r8gL._AC_UF1000,1000_QL80_.jpg" alt="The Picture of Dorian Grey" width="150">
+            <p><a href="https://www.amazon.com/Picture-Dorian-Gray-Oscar-Wilde/dp/B08PXHL836/ref=sr_1_22?crid=2VYS4YVSEFD1V&keywords=the+picture+of+dorian+grey&qid=1706645150&sprefix=the+picture+of+dorian+grey%2Caps%2C126&sr=8-22">The Picture of Dorian Grey</a></p>
+
+        &nbsp;
+        &nbsp;
+
+        <!--CENTER-->
+        <h2>Book Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Name </th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+                        
+            <tbody>
+                <tr>
+                    <td><span class = "book-title">The Picture of Dorian Grey</span></th>
+                    <td><span class = "author-name">Oscar Wildex</span></td>
+                </tr>
+                <tr>
+                    <td><span class = "book-title">Throne of Glass</span></td>
+                    <td><span class = "author-name">Sarah J. Mass</span></td>
+                </tr>
+                <tr>
+                    <td><span class = "book-title">The Selection</span></td>
+                    <td><span class = "author-name">Kiera Cass</span></td>
+                </tr>
+        </table>
+
+        &nbsp;
+        &nbsp;
+
+        <h2>Checkout</h2>
+        <p>Proceed to <a href="checkout.html">checkout</a>.</p>
+       
+        
+        <h2>Contact Us</h2>
+        <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <button type="submit">Submit</button>
+        </form>
+        
+    
+    </body>
+</html>
+    
+    
