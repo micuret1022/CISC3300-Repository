@@ -1,1 +1,89 @@
+<!--1. Create a variable via a ternary operator that assigns a string based on an expression--> 
+
+<script>
+    const age = 21;
+    const status = age >= 18 ? 'adult' : 'minor';
+    console.log(status);
+</script>
+
+<!--2. Create an object and loop through its properties, console logging each properties’ value-->
+
+<script>
+    const person = {
+        name: 'Jeff',
+        age: 25,
+        city: 'Detroit'
+    };
+
+    for (let key in person) {
+        console.log(person[key]);
+    }
+</script>
+
+<!--3. Create an array of numbers. Using the map function, create a second array of those numbers squared-->
+
+<script>
+    const numbers = [2, 4, 6, 8, 10]
+    const squaredNumbers = numbers.map(num => num * num);
+    console.log(squaredNumbers); //Output: [4, 16, 36, 64, 100]
+</script>
+
+<!--4. What is the DOM? What is meant by the DOM tree?-->
+<!-- The DOM (Document Object Model) specifies how browsers create a model of an HTML page and 
+    how JavaScript can access and update the contents of a web page while it is in the browser window. 
+    The DOM tree is a hierarchial representation of the elements in an HTML document, where each node represents
+    an element and attributes, and the relationships between elements are depicted through parent-child relationships.-->
+
+<!--5. What is a XSS attack? How do they work? How can you guard against them?-->
+<!-- XSS (Cross-Site Scripting) is a type of security vulnerability typically found in web applications. 
+     It allows attackers in input malicious scripts into web pages viewed by other users. These scripts can steal 
+     sensitive data. There are different ways to guard against these attacks, such as 1) be very careful with 
+     what content you treat as html  2) It should very rarely have the option to have come from a user at all  
+     3) If it is necessary there are options to validate that input, strip it of potential malicious intent by 
+     removing tags, escaping charachters, etc... -->
+
+<!--6a. Add a button with an id, when that button is clicked, change the button’s text-->
+
+<button id="myButton" onclick="changeText()">Click Me!</button>
+<script>
+    function changeText() {
+        document.getElementById('myButton').innerText = 'Button Clicked';
+    }
+</script>
+
+<!--6b. Add a list with several list items, if any list item is clicked, change all list items color to blue-->
+
+<ul id="myList">
+    <li>Dog</li>
+    <li>Cat</li>
+    <li>Rabbit</li>
+    <li>Snake</li>
+    <li>Hamster</li>
+</ul>
+<script>
+    const listItems = document.querySelectorAll('#myList li');
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            listItems.forEach(li => {
+                li.style.color = 'blue';
+            });
+        });
+    });
+</script>
+
+<!--6c. Add a div that contains a second button element. When that button element is clicked, append a paragraph element with some text to the containing div after the second button.-->
+
+<div id="myDiv">
+    <button id="secondButton">Click me</button>
+</div>
+<script>
+    const div = document.getElementById('myDiv');
+    const button = document.getElementById('secondButton');
+
+    button.addEventListener('click', () => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = 'New Paragraph!';
+        div.appendChild(paragraph);
+    });
+</script>
 
